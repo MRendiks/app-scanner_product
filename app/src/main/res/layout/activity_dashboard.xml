@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@drawable/img_7"
+    tools:context=".DashboardActivity"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/scanpic"/>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"
+            android:text="Hallo, ">
+        </TextView>
+        <TextView
+            android:id="@+id/tvUsername"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnTambah"
+            android:layout_width="12dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:background="#FFFFFFFF"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_9" />
+
+        <ImageButton
+            android:id="@+id/btnUbah"
+            android:layout_width="12dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:background="#FFFFFFFF"
+            android:src="@drawable/img_11"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="22dp"
+            android:layout_height="100dp"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:background="#FFFFFFFF"
+            android:src="@drawable/img_1"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp" />
+        <ImageButton
+            android:id="@+id/btnLihat"
+            android:layout_width="22dp"
+            android:layout_height="100dp"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:background="#FFFFFFFF"
+            android:src="@drawable/img_10"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.databarang.qrcode">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/gambar"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/gambar"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.QRCode">
+        <activity
+            android:name=".TambahActivity"
+            android:exported="false"
+            android:parentActivityName=".DashboardActivity"/>
+        <activity
+            android:name=".LihatBarangActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TestSpeakActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+        <activity android:name=".HapusActivity"
+            android:exported="false"/>
+        <activity android:name=".UpdateActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity android:name=".ScannerActivity" />
+        <activity
+            android:name=".UbahActivity"
+            android:label="Ubah Barang"
+            android:parentActivityName=".DashboardActivity" />
+    </application>
+
+</manifest>

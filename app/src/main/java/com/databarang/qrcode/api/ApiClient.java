@@ -7,7 +7,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
-    private static final String BASE_URL = "https://gantarielektrikwarehouse.cloud/bc_scanner/";
+    private static final String BASE_URL = "http://192.168.28.222/ALIF/bc_scanner/";
 
     private static Retrofit retrofit;
 

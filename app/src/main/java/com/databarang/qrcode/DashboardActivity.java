@@ -1,5 +1,6 @@
 package com.databarang.qrcode;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -24,10 +25,11 @@ import retrofit2.Response;
 public class DashboardActivity extends AppCompatActivity {
     TextView Username;
     String nama;
-    ImageButton btnTambah, btnLihat, btnHapus, btnUbah;
+    ImageButton btnTambah, btnLihat, btnHapus, btnUbah, btnLogout, btnAddQuantity;
     SessionManager sessionManager;
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,6 +86,24 @@ public class DashboardActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnAddQuantity = findViewById(R.id.btnaddQauntityDash);
+        btnAddQuantity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashboardActivity.this, AddQuantityActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnLogout = findViewById(R.id.btnLogout);
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sessionManager.logoutSession();
+                moveToLogin();
+            }
+        });
     }
 
     private void moveToLogin() {
@@ -124,13 +144,20 @@ public class DashboardActivity extends AppCompatActivity {
                                 .setMessage(response.body().getMessage())
                                 .setIcon(R.mipmap.ic_launcher)
                                 .setCancelable(false)
-                                .setPositiveButton("Ya",new DialogInterface.OnClickListener() {
+                                .setPositiveButton("Lanjut",new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog,int id) {
                                         Intent intent = new Intent(DashboardActivity.this, UpdateActivity.class);
                                         startActivity(intent);
                                         finish();
                                     }
+                                })
+                                .setNegativeButton("Mengerti", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                                    }
                                 });
+
 
                         AlertDialog alertDialog = alertDialogBuilder.create();
 

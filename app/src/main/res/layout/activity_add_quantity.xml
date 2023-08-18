@@ -14,9 +14,9 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:text="ADD QUANTITY DATA BARANG"
         android:textColor="#FFFFFF"
-        android:text="TAMBAH DATA BARANG"
-        android:textSize="28dp" />
+        android:textSize="22dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,13 +30,14 @@
             android:textSize="15dp"
             android:text="ID Barcode : " />
         <TextView
-            android:id="@+id/result"
+            android:id="@+id/Idresult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
             android:textSize="15dp"
             android:text="" />
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -49,13 +50,14 @@
             android:textColor="#FFFFFF"
             android:textSize="15dp"
             android:text="Nama Barang : " />
-        <EditText
-            android:id="@+id/produkname"
+
+        <TextView
+            android:id="@+id/addprodukname"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:hint=""
             android:textColor="#FFFFFF"
-            android:hint="Masukkan nama produk"
-            android:textSize="15dp"/>
+            android:textSize="15dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -69,12 +71,12 @@
             android:textColor="#FFFFFF"
             android:textSize="15dp"
             android:text="Kategori : " />
-        <EditText
-            android:id="@+id/kategori"
+        <TextView
+            android:id="@+id/addkategori"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
-            android:hint="Masukkan Nama Kategori"
+            android:hint=""
             android:textSize="15dp"/>
     </LinearLayout>
 
@@ -90,11 +92,11 @@
             android:textSize="15dp"
             android:text="Jumlah : " />
         <EditText
-            android:id="@+id/quantity"
+            android:id="@+id/addquantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
-            android:hint="Masukkan Jumlah"
+            android:hint=""
             android:textSize="15dp"/>
     </LinearLayout>
 
@@ -109,14 +111,16 @@
             android:textColor="#FFFFFF"
             android:textSize="15dp"
             android:text="Harga : Rp." />
-        <EditText
-            android:id="@+id/price"
+        <TextView
+            android:id="@+id/addprice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
-            android:hint="Masukkan Harga"
+            android:hint=""
             android:textSize="15dp"/>
     </LinearLayout>
+
+
     <Button
         android:id="@+id/btn_scan"
         android:layout_marginLeft="25dp"
@@ -126,22 +130,18 @@
         android:textColor="#FF000000"
         android:background="#FFFFFF"
         android:fontFamily="sans-serif-black"
-        android:text="Scan" />
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="" />
+        android:text="Scan" android:layout_marginTop="20dp"/>
+
     <Button
-        android:id="@+id/btn_submit"
+        android:id="@+id/btnaddQauntity"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#FF000000"
-        android:background="#E8FF00"
-        android:fontFamily="sans-serif-black"
-        android:text="KIRIM DATA" />
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="20dp"
+        android:background="@color/purple_700"
+        android:text="Add Quantity Data" />
 
 
 

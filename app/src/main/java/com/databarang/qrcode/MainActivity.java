@@ -126,9 +126,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 .setMessage(response.body().getMessage())
                                 .setIcon(R.mipmap.ic_launcher)
                                 .setCancelable(false)
-                                .setPositiveButton("Ya",new DialogInterface.OnClickListener() {
+                                .setPositiveButton("Lanjut",new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog,int id) {
-                                        Intent intent = new Intent(MainActivity.this, LihatBarangActivity.class);
+                                        Intent intent = new Intent(MainActivity.this, UpdateActivity.class);
+                                        startActivity(intent);
+                                        finish();
+                                    }
+                                })
+                                .setNegativeButton("Mengerti", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
                                         startActivity(intent);
                                         finish();
                                     }

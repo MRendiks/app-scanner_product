@@ -55,6 +55,13 @@ public interface ApiInterface {
             @Field("quantity") String quantity
             );
 
+    @FormUrlEncoded
+    @POST("tambah_stok_barang.php")
+    Call<Hapus> addQuantity(
+            @Field("id") String id,
+            @Field("quantity") String quantity
+    );
+
     @GET("lihat.php")
     Call<ResponseModel> lihatResponse();
 

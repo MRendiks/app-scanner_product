@@ -9,7 +9,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.databarang.qrcode.R;
 import com.databarang.qrcode.api.ApiClient;
 import com.databarang.qrcode.api.ApiInterface;
 import com.databarang.qrcode.model.login.Login;
@@ -31,6 +30,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        sessionManager = new SessionManager(LoginActivity.this);
+
+        if(sessionManager.isLoggedIn()){
+            Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_HISTORY);
+            startActivity(intent);
+            finish();
+        }
 
         etUsername = findViewById(R.id.LoginUsername);
         etPassword = findViewById(R.id.LoginPass);

@@ -107,6 +107,39 @@
 
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnaddQauntityDash"
+            android:layout_width="22dp"
+            android:layout_height="100dp"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:background="#FFFFFFFF"
+            android:src="@drawable/add_quantity"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp" />
+
+        <ImageButton
+            android:id="@+id/btnLogout"
+            android:layout_width="22dp"
+            android:layout_height="100dp"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:background="#FFFFFFFF"
+            android:src="@drawable/exit"
+            android:scaleType="fitCenter"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp" />
+        
+    </LinearLayout>
 
 
 
